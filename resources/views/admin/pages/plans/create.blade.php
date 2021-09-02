@@ -12,7 +12,6 @@
        <div class="card-header"></div>
         <div class="body p-5">
             <form action="{{route('plans.store')}}" method="POST">
-                @csrf
                 @include('admin.pages.plans._partials.form')
             </form>
 

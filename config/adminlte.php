@@ -240,12 +240,20 @@ return [
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
-        ],     
+        ],
+        [
+            'text'        => 'Empresas',
+            'url'         => 'admin/tenants',
+            'icon'        => 'far fa-fw fa-file',
+            'label_color' => 'success',
+         
+        ],  
         [
             'text'        => 'Planos',
             'url'         => 'admin/plans',
             'icon'        => 'far fa-fw fa-file',
             'label_color' => 'success',
+            'can'         => 'Plans'
         ],
 
         [
@@ -253,12 +261,56 @@ return [
             'url'         => 'admin/profiles',
             'icon'        => 'far fa-address-book',
             'label_color' => 'success',
+            'can'         => 'Profile'
+        ],
+
+        [
+            'text' => 'Cargos',
+            'url'  => 'admin/roles',
+            'icon' => 'fas fa-address-card',
+            'can'  =>  'roles',
         ],
 
         [
             'text'        => 'Permissões',
             'url'         => 'admin/permissions',
             'icon'        => 'fas fa-lock',
+            'label_color' => 'success',
+            'can'         => 'Permission'
+           
+        ],
+
+        [
+            'text'        => 'Usuários',
+            'url'         => 'admin/users',
+            'icon'        => 'fas fa-users',
+            'label_color' => 'success',
+            'can'         => 'users'
+           
+        ],
+
+        [
+            'text'        => 'Categorias',
+            'url'         => 'admin/categories',
+            'icon'        => 'fas fa-layer-group',
+            'label_color' => 'success',
+            'can'         => 'categories'
+           
+        ],
+
+        [
+            'text'        => 'Produtos',
+            'url'         => 'admin/products',
+            'icon'        => 'fab fa-product-hunt',
+            'label_color' => 'success',
+            'can'         => 'product'
+           
+        ],
+        
+        [
+            'text'        => 'Mesas',
+            'url'         => 'admin/table',
+            'icon'        => 'fas fa-coffee',
             'label_color' => 'success',
            
         ],
