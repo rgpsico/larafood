@@ -27,11 +27,10 @@ class TableApiController extends Controller
 
    }
 
-   public function show(Request $request , $url)
-   {   
-      
+   public function show(Request $request , $identify)
+   {        
     
-    if(!$table = $this->tableService->getTableByUuid($url)){
+    if(!$table = $this->tableService->getTableByUuid($identify)){
         return response()->json(['message'=>'Token Not found',404]);
      }
      return  TableResource::collection($table);

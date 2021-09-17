@@ -20,13 +20,22 @@ class TableRepository implements  TableRepositoryInterface
         return DB::table($this->table)->paginate($per_page);
     }
 
-    public function getTableByUuid(string $uuid)
+  /*  public function getTableByUuid(string $uuid)
     {
         return  DB::table($this->table)
         ->join('tenants','tenants.id', '=','tables.tenant_id')
         ->where('tenants.uuid',$uuid)
         ->select('tables.*')
         ->get();
+    }
+*/
+
+    public function getTableByUuid(string $uuid)
+    {    
+    
+        return DB::table($this->table)
+                ->where('uuid', $uuid)
+                ->get();
     }
 
 

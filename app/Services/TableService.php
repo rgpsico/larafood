@@ -17,19 +17,14 @@ class TableService
       
     }
 
-  
-
-
-
-
     public function getAllTable(int $per_page)
     {
         return $this->tableRepository->getAllTable($per_page);
     }
 
-    public function getTableByUuid($id)
+    public function getTableByUuid( string $identify)
     {
-        return $this->tableRepository->getTableByUuid($id);
+        return $this->tableRepository->getTableByUuid($identify);
     }
 
     
